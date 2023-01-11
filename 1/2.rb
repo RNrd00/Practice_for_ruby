@@ -228,3 +228,5 @@ numbers=[]
 puts numbers
 #stepメソッドは値を増やす間隔を指定できる 119page
 
+#しばらくページ飛びます。続きはrgb.rbで
+
