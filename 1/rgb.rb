@@ -6,9 +6,7 @@
         end
     end
     
-    def to_ints(hex)
-        [0,0,0]
-    end
+    def to_ints(hex) = hex.scan(/\w\w/).map(&:hex)
 
 #rjustメソッドは右寄せを行う。
-#page124
+#page126
