@@ -441,3 +441,49 @@ fruits=['apple','orange','melon']
 p fruits.each
 p fruits.map
 p fruits.delete_if
+#144page
+
+fruits =['apple','orange','melon']
+fruits.each.with_index(1) { |fruit, i| puts "#{i}: #{fruit}" }
+fruits.map.with_index(10) { |fruit, i| puts "#{i}: #{fruit}" }
+
+dimensions=[
+    [10,20],
+    [30,40],
+    [50,60],
+    ]
+areas=[]
+dimensions.each do |dimension|
+    length=dimension[0]
+    width=dimension[1]
+    areas << length*width
+end
+p areas
+
+dimensions=[
+    [10,20],
+    [30,40],
+    [50,60],
+    ]
+areas=[]
+dimensions.each do |length,width|
+    areas << length*width
+end
+p areas
+#page145
+
+dimensions.each do |length, width, foo ,ber|
+    p [length, width, foo ,ber]
+end
+
+dimensions=[
+    [10,20,100],
+    [30,40,200],
+    [50,60,300],
+    ]
+dimensions.each do |length,width|
+     p [length, width]
+ end
+ #page146
+ 
+ 
