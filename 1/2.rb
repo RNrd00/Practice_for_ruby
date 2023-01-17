@@ -519,4 +519,60 @@ dimensions.each_with_index do |(length, width), i|
 end
 #page147
 
+dimension, i = [[10,20],0]
+p dimension
+puts i
+
+(length,width),i=[[10,20],0]
+puts length
+puts width
+puts i
+
+p ['1','20','300'].map { |s| s.rjust(3, '0') }
+p ['1','20','300'].map { _1.rjust(3, '0') }
+p ['japan','us','italy'].map.with_index { |country,n| [n,country] }
+p ['japan','us','italy'].map.with_index { [_2,_1] }
+#148page
+
+ dimensions=[
+     [10,20],
+     [30,40],
+     [50,60],
+     ]
+dimensions.each { p _1 }
+dimensions.each { puts "#{_1} / #{_2}" }
+
+#sum = 0
+#[[1,2,3],[4,5,6]].each do
+#    _1.each do
+#        sum += _1
+#   end
+#end
+
+sum = 0
+[[1,2,3],[4,5,6]].each do |value|
+    value.each do
+       sum += _1
+   end
+end
+
+#['1','20','300'].map { |s| _1.rjust(3,'0')}
+#page149
+
+numbers = [1,2,3,4]
+sum = 0
+numbers.each do |n; sum|
+    sum = 10
+    sum += n
+    puts sum
+end
+p sum
+
+#File.open('./sample.txt', 'w') do |file|
+#    file.puts('1行目のテキストです。')
+#    file.puts('2行目のテキストです。')
+#    file.puts('3行目のテキストです。')
+#end
+#page150
+
 
