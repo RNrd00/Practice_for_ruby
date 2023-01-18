@@ -575,4 +575,69 @@ p sum
 #end
 #page150
 
+a=[1,2,3]
+a.delete(100)
+p a
+
+p a.delete(100) do
+    'NG'
+end
+
+p a
+
+#a.delete 100 { 'NG' }
+
+p a.delete(100) { 'NG' }
+p a
+#page 151
+
+names = ['田中','鈴木','佐藤']
+san_names = names.map { |name| "#{name}さん" } 
+p san_names.join('と')
+
+names =['田中','鈴木','佐藤']
+p names.map { |name| "#{name}さん" }.join('と')
+
+names =['田中','鈴木','佐藤']
+names2=names.map do |name|
+    "#{name}さん"
+end.join('と')
+p names2
+
+a = (10..)
+p a
+a= (10..nil)
+p a
+
+a=(..10)
+p a
+a=(nil..10)
+p a
+numbers=[10,20,30,40,50]
+p numbers[2..]
+p numbers[..1]
+
+a=(nil..nil)
+p a
+a=(nil..)
+p a
+a=(..nil)
+p a
+
+sum=0
+5.times { |n| sum += n}
+p sum
+
+sum=0
+5.times { sum +=1}
+p sum
+
+a=[]
+10.upto(14) { |n| a << n}
+p a
+
+a=[]
+14.downto(10) { |n| a << n}
+p a
+#154page
 
