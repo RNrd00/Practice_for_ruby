@@ -641,3 +641,25 @@ a=[]
 p a
 #154page
 
+a=[]
+1.step(10,2) { |n| a << n }
+p a
+
+a=[]
+10.step(1,-2) { |n| a << n }
+p a
+
+a=[]
+while a.size < 5
+    a << 1
+end
+p a
+
+a = []
+while a.size < 5 do a << 1 end
+p a
+#155page
+
+a = []
+a << 1 while a.size < 5
+p a
