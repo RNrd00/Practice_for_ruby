@@ -885,3 +885,62 @@ p a
 #a={ 'japan' => 'yen', 'japan' => '円' }
 #p a
 
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee' }
+currencies['italy'] = 'euro'
+p currencies
+
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee' }
+currencies['japan'] = '円'
+p currencies
+
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee' }
+p currencies['india']
+
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee' }
+p currencies['brazil']
+
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee' }
+currencies.each do |key, value|
+    puts "#{key} : #{value}"
+end
+#page172
+
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee' }
+currencies.each do |key_value|
+    key = key_value[0]
+    value = key_value[1]
+    puts "#{key} : #{value}"
+end
+
+a = { 'x' => 1, 'y' => 2, 'z' => 3 }
+b = { 'x' => 1, 'y' => 2, 'z' => 3 }
+p a==b
+
+c = { 'z' => 3, 'y' => 2, 'x' => 1 }
+p a==c
+
+d = { 'x' => 10, 'y' => 2, 'z' => 3}
+p a==d
+
+{}.size
+{ 'x' => 1, 'y' => 2, 'z' => 3 }.size
+
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee' }
+p currencies.delete('japan')
+p currencies
+
+currencies = {'japan' => 'yen', 'us'=>'dollar','india'=>'rupee'}
+p currencies.delete('italy')
+p currencies.delete('italy') { |key| "Not Found: #{key}" }
+#page174
+
+p :apple.class
+p :apple == :apple
+
+p :apple.object_id
+p :apple.object_id
+p :apple.object_id
+
+#symbol = :apple
+#p symbol.upcase!
+
