@@ -944,3 +944,9 @@ p :apple.object_id
 #symbol = :apple
 #p symbol.upcase!
 
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee' }
+p currencies['japan']
+
+currencies = { :japan => 'yen', :us => 'dollar', :india => 'rupee' }
+p currencies[:japan]
+#page175
