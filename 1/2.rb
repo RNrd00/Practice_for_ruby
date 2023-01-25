@@ -950,3 +950,5 @@ p currencies['japan']
 currencies = { :japan => 'yen', :us => 'dollar', :india => 'rupee' }
 p currencies[:japan]
 #page175
+
+#test
