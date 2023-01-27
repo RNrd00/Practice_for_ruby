@@ -951,4 +951,61 @@ currencies = { :japan => 'yen', :us => 'dollar', :india => 'rupee' }
 p currencies[:japan]
 #page175
 
-#test
+status = 2
+a = case status
+when 0
+    'これからやります'
+when 1
+    '今やっています'
+when 2
+    'もう終わりました'
+end
+
+p a
+
+status = :done
+
+a = case status
+when :todo
+    'これからやります'
+when :doing
+    '今やっています'
+when :done
+    'もう終わりました'
+end
+
+p a
+
+currencies = { japan: 'yen', us: 'dollar', india: 'rupee'}
+p currencies[:us]
+
+hash = { 'abc' => 123, def: 456 }
+p hash['abc']
+p hash[:def]
+p hash[:abc]
+p hash['def']
+
+person = {
+    name: 'Alice',
+    age: 20,
+    friends: ['Bob', 'Carol'],
+    phones: {home: '1234-0000', mobile: '5678-0000'}
+}
+
+p person[:age]
+p person[:friends]
+p person[:phones][:mobile]
+
+def buy_burger(menu, drink, potato)
+    if drink
+        'au'
+    end
+    if potato
+        'gaga'
+    end
+end
+
+p buy_burger('cheese', true, true)
+p buy_burger('fish', true, true)
+
+#page178
