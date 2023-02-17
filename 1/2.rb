@@ -1009,3 +1009,33 @@ p buy_burger('cheese', true, true)
 p buy_burger('fish', true, true)
 
 #page178
+def buy_burger(menu, drink: true, potato: true)
+    if drink
+        'au'
+    end
+    if potato
+        'gaga'
+    end
+end
+
+p buy_burger('cheese',drink: true, potato: true)
+p buy_burger('fish',drink: true, potato: true)
+p buy_burger('cheese', potato: true)
+p buy_burger('cheese')
+p buy_burger('fish',potato: false,drink: true )
+#p buy_burger('fish',salad: true)
+
+def buy_burger(menu, drink: , potato:)
+    if drink
+        'au'
+    end
+    if potato
+        'gaga'
+    end
+end
+
+p buy_burger('cheese',drink: true, potato: true)
+#p buy_burger('cheese',potato: false)
+
+params={drink: true, potato: false}
+p buy_burger('cheese', **params)
