@@ -1039,3 +1039,5 @@ p buy_burger('cheese',drink: true, potato: true)
 
 params={drink: true, potato: false}
 p buy_burger('cheese', **params)
+#180page　一旦ジャンプ
+
