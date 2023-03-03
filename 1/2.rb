@@ -1041,3 +1041,13 @@ params={drink: true, potato: false}
 p buy_burger('cheese', **params)
 #180page　一旦ジャンプ
 
+#186page
+currencies = {japan:'yen',us:'dollar',india:'rupee'}
+p currencies.keys
+
+currencies = {japan:'yen',us:'dollar',india:'rupee'}
+p currencies.values
+
+p currencies.has_key?(:japan)
+p currencies.has_key?(:italy)
+
