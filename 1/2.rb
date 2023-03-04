@@ -1051,3 +1051,9 @@ p currencies.values
 p currencies.has_key?(:japan)
 p currencies.has_key?(:italy)
 
+h = { us:'dollar',india:'rupee'}
+p ({japan:'yen',**h})
+h = { us:'dollar',india:'rupee'}
+p ({japan: 'yen'}).merge(h)
+#188page
+
