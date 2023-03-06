@@ -1068,3 +1068,63 @@ end
 p buy_burger 'fish','drink'=>true,'potato'=>false
 
 #page192
+
+h=Hash.new('hello')
+p h[:foo]
+
+h=Hash.new { |hash,key| hash[key]='hello' }
+p h[:foo]
+p h[:bar]
+p h
+
+def foo(a,...)
+    bar(a*100,...)
+end
+
+def bar(a,b,c:1)
+ puts "a=#{a},b=#{b},c=#{c}"
+end
+p foo(10,20,c:30)
+
+p %s!ruby is fun!
+p %s(ruby is fun)
+
+p %i(apple orange melon)
+
+name = 'Alice'
+
+p %i(hello\ngood-bye #{name.upcase})
+p %I(hello\ngood-bye #{name.upcase})
+
+string='apple'
+symbol=:apple
+
+p string.to_sym
+p string.to_sym == symbol
+
+string='apple'
+symbol=:apple
+
+p symbol.to_s
+p string == symbol.to_s
+p string + symbol.to_s
+
+p 'apple'.respond_to?('include?')
+p 'apple'.respond_to?(:include?)
+p 'apple'.respond_to?('foo_bar')
+p 'apple'.respond_to?(:foo_bar)
+
+#page200
+
+def find_currency(country)
+    currencies = {japan:'yen',us:'dollar',india:'rupee'}
+    currencies[country]
+end
+def show_currency(country)
+    currency=find_currency(country)
+    currency&.upcase
+end
+p show_currency(:japan)
+p show_currency(:brazil)
+
+#page202
