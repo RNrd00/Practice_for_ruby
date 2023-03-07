@@ -485,13 +485,13 @@ dimensions.each do |length,width|
      p [length, width]
  end
  #page146
- 
+
  dimensions=[
      [10,20],
      [30,40],
      [50,60],
      ]
-     
+
 dimensions.each_with_index do |length, width, i|
     puts "length: #{length}, width: #{width}, i: #{i}"
 end
@@ -501,7 +501,7 @@ end
      [30,40],
      [50,60],
      ]
-     
+
 dimensions.each_with_index do |dimension, i|
     length = dimension[0]
     width = dimension[1]
@@ -592,7 +592,7 @@ p a
 #page 151
 
 names = ['田中','鈴木','佐藤']
-san_names = names.map { |name| "#{name}さん" } 
+san_names = names.map { |name| "#{name}さん" }
 p san_names.join('と')
 
 names =['田中','鈴木','佐藤']
@@ -851,7 +851,7 @@ end
 #    print "#{food}は好きですか？ =>"
 #    answer = ['はい','いいえ'].sample
 #    puts answer
-#    
+#
 #    redo unless answer == 'はい'
 #end
 
@@ -861,7 +861,7 @@ foods.each do |food|
     print "#{food}は好きですか? =>"
     answer = 'いいえ'
     puts answer
-    
+
     count += 1
     redo if answer != 'はい' && count < 2
     count = 0
@@ -1128,3 +1128,27 @@ p show_currency(:japan)
 p show_currency(:brazil)
 
 #page202
+
+limit = nil
+limit ||=10
+p limit
+
+limit = nil
+limit ||=begin
+    a=10
+    b=20
+    a+b
+end
+p limit
+
+def user_exists?
+    !!find_user
+end
+
+p !!true
+p !!1
+p !!false
+p !!nil
+
+#pag206
+
